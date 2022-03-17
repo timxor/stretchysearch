@@ -7,6 +7,7 @@ stretchysearch aka elasticsearch local macos dev playground
 
 ```
 python3 install.py
+python3 start.py
 
 # leave running in terminal screen 01
 ./elasticsearch-8.1.0/bin/elasticsearch
