@@ -1,7 +1,7 @@
-# elastic files
-#elasticsearch-8.1.0-darwin-x86_64.tar.gz.sha512
-#elasticsearch-8.1.0-darwin-x86_64.tar.gz
-#elasticsearch-8.1.0
+# .gitignore
 
-
+# elastic build and source files
+elasticsearch-8.1.0
+elasticsearch-8.1.0-darwin-aarch64.tar.gz
+elasticsearch-8.1.0-darwin-aarch64.tar.gz.sha512
 
