@@ -1,19 +1,59 @@
 # stretchysearch
+
 stretchysearch aka elasticsearch local macos dev playground
 
-## run
 
-```commandline
-python3 install.py
-./bin/elasticsearch
-cd /Users/tim/code/stretchysearch/elasticsearch-8.1.0
-# if it fails
-# then run: rm -rf data
+## download source and start server
 
-curl --cacert $ES_PATH_CONF/certs/http_ca.crt -u elastic https://localhost:9200
-Enter host password for user 'elastic':
-default password = changeme
 ```
+python3 install.py
+
+# leave running in terminal screen 01
+./elasticsearch-8.1.0/bin/elasticsearch
+```
+
+
+
+## grab password
+
+```
+# run in terminal screen 02
+bin/elasticsearch-reset-password -u elastic
+password=jQz6HZc5YndCiET3NnUK
+```
+
+
+## test endpoint with a curl
+
+```
+tim@super.macbook😀=> curl --cacert $ES_PATH_CONF/certs/http_ca.crt -u elastic https://localhost:9200
+Enter host password for user 'elastic':
+{
+  "name" : "supermacbook.local",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "3MML3mZ7QcuZnbNdaQPhLg",
+  "version" : {
+    "number" : "8.1.0",
+    "build_flavor" : "default",
+    "build_type" : "tar",
+    "build_hash" : "3700f7679f7d95e36da0b43762189bab189bc53a",
+    "build_date" : "2022-03-03T14:20:00.690422633Z",
+    "build_snapshot" : false,
+    "lucene_version" : "9.0.0",
+    "minimum_wire_compatibility_version" : "7.17.0",
+    "minimum_index_compatibility_version" : "7.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+tim@super.macbook😀=> 
+
+```
+
+
+
+
+
+
 
 ## macos security certs
 
