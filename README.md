@@ -52,14 +52,11 @@ tim@super.macbook😀=>
 
 
 
-
-
-
 ## macos security certs
 
-```commandline
-cd stretchysearch/elasticsearch-8.1.0/config/certs
-security export -p -t certs -k `security list-keychains -d system|cut -d '"' -f 2` -o certs/certs.pem
+```
+cd elasticsearch-8.1.0/config/certs
+security export -p -t certs -k `security list-keychains -d system|cut -d '"' -f 2` -o generated-keychain-certs.pem
 echo insecure >> ~/.curlrc
 git config --global http.sslVerify false
 HOMEBREW_CURLRC=1 brew reinstall openssl curl
