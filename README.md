@@ -24,6 +24,13 @@ password=jQz6HZc5YndCiET3NnUK
 ```
 
 
+## test endpoint in browser
+
+```
+https://localhost:9200/
+```
+
+
 ## test endpoint with a curl
 
 ```
